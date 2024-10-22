@@ -5,7 +5,7 @@ name = "pypi"
 
 [packages]
 jupyter = "*"
-pandas = "*"
+pandas = "==2.2.3"
 pylint = "*"
 
 [dev-packages]
