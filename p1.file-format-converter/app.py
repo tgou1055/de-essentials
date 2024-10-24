@@ -17,6 +17,7 @@ import glob
 import json
 import re
 import pandas as pd
+from dotenv import load_dotenv
 
 
 def get_column_names(schemas: dict, ds_name: str, sorting_key='column_position'):
@@ -82,6 +83,8 @@ def process_files(ds_names=None):
 
 
 if __name__ == '__main__':
+    # Load environment variables from the .env file
+    load_dotenv()
     # use run time arguments to pass data file names
     if len(sys.argv) == 2:
         t_names = json.loads(sys.argv[1])

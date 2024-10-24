@@ -83,10 +83,10 @@ def process_files(ds_names=None):
         except NameError as ne:
             print(ne)
             print(f'Error processing {ds_name}')
-            pass
-        except Exception as e:
+            pass # pylint: disable=unnecessary-pass
+        except Exception as e: # pylint: disable=broad-exception-caught
             print(e)
-            pass
+            pass # pylint: disable=unnecessary-pass
         finally:
             print(f'Complete Processing {ds_name}')
 
